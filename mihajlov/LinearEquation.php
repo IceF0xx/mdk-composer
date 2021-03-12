@@ -5,7 +5,7 @@ use InvalidArgumentException;
 
 class LinearEquation
 {
-    function solveLinear($b, $c): array
+    function solveLinear(float $b, float $c): array
     {
         if ($b === 0) {
             throw new InvalidArgumentException("Equation doesn't exist");

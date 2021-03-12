@@ -6,7 +6,7 @@ use core\EquationInterface as EI;
 
 class QuadraticEquation extends LinearEquation implements EI
 {
-    private function discriminant_sq($a, $b, $c): float
+    private function discriminant_sq(float $a, float $b, float $c): float
     {
         $discriminant = pow($b, 2) - 4 * $a * $c;
         if ($discriminant < 0) {
@@ -15,7 +15,7 @@ class QuadraticEquation extends LinearEquation implements EI
         return sqrt($discriminant);
     }
 
-    function solve($a, $b, $c): array
+    function solve(float $a, float $b, float $c): array
     {
         if ($a == 0) {
             return parent::solveLinear($b, $c);
