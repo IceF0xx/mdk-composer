@@ -31,7 +31,7 @@ class QuadraticEquation extends LinearEquation implements EI
             $this->X = [0, -$b];
         } else {
             $this->X = [(-$b + $discriminant_sq) / 2 / $c,
-                ($b + $discriminant_sq) / 2 / $c];
+                (-$b - $discriminant_sq) / 2 / $c];
         }
 
         return $this->X;
