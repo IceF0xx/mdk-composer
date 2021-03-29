@@ -16,7 +16,7 @@ class MyLogTest extends TestCase
 
         $logFileContent = file_get_contents($logFileDir);
 
-        $this->assertEquals($expectedString . "\r\n", $logFileContent);
+        $this->assertEquals($expectedString, $logFileContent);
         $this->expectOutputString($expectedString);
     }
 
